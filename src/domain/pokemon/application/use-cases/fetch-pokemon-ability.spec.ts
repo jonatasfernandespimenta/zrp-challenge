@@ -20,9 +20,9 @@ describe("Fetch Pokemon Ability", () => {
       })
       .sort();
 
-    const result = await sut.execute({ name: "ditto" });
+    const { abilities } = await sut.execute({ name: "ditto" });
 
-    expect(result).toHaveLength(3);
-    expect(result).toStrictEqual(expectedResult);
+    expect(abilities).toHaveLength(3);
+    expect(abilities).toStrictEqual(expectedResult);
   });
 });
